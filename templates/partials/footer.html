@@ -1,0 +1,44 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="footer-brand-name">{{ clinic.name }}</span>
+      <span class="footer-brand-sub">{{ clinic.tagline }}</span>
+    </div>
+
+    <div class="footer-cols">
+      <div class="footer-col">
+        <div class="finfo-label">Ажиллах цаг</div>
+        <div class="finfo-value">
+          Даваа–Баасан: {{ clinic.hours_weekday }}<br />Бямба: {{
+          clinic.hours_saturday }}
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="finfo-label">Холбогдох дугаар</div>
+        <div class="finfo-value">{{ clinic.phones|join(', ') }}</div>
+      </div>
+      <div class="footer-col">
+        <div class="finfo-label">Холбогдох</div>
+        <div class="finfo-value footer-links">
+          <a
+            href="https://www.facebook.com/share/1CVvYEywnk/?mibextid=wwXIfr"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Facebook</a
+          >
+          <a href="mailto:aztesa.addiction@gmail.com"
+            >aztesa.addiction@gmail.com</a
+          >
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="finfo-label">Хаяг</div>
+        <div class="finfo-value">{{ clinic.address }}</div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © {{ clinic.name }}. Бүх эрх хуулиар хамгаалагдсан.
+    </div>
+  </div>
+</footer>

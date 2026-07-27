@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "lottie-react": "^2.4.1",
+    "lucide": "^1.27.0",
+    "lucide-static": "^1.27.0"
+  }
+}

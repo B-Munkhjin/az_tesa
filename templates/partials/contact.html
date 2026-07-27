@@ -1,0 +1,53 @@
+﻿<section class="section" id="contact">
+  <div class="container">
+    <div class="contact-card">
+      <div class="contact-header">
+        <p class="eyebrow">ХОЛБОГДОХ</p>
+        <h2 class="section-title">Бидэнтэй холбогдоно уу</h2>
+        <p class="section-sub">
+          Танд асуух зүйл байвал утсаар холбогдож, цагийн хуваарь болон хаягаа
+          аваарай.
+        </p>
+      </div>
+
+      <div class="contact-list">
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true">
+            <i data-lucide="clock-3"></i>
+          </div>
+          <div>
+            <div class="info-label">Ажиллах цаг</div>
+            <div class="info-value">
+              Даваа – Баасан: {{ clinic.hours_weekday }}<br />Бямба: {{
+              clinic.hours_saturday }}
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true">
+            <i data-lucide="phone"></i>
+          </div>
+          <div>
+            <div class="info-label">Холбогдох дугаар</div>
+            <div class="info-value">
+              {% for phone in clinic.phones %}
+              <a href="tel:{{ phone }}">{{ phone }}</a>{% if not loop.last %},
+              {% endif %} {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true">
+            <i data-lucide="map-pin"></i>
+          </div>
+          <div>
+            <div class="info-label">Хаяг</div>
+            <div class="info-value">{{ clinic.address }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

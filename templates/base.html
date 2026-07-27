@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="mn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% block title %}AZ TESA — Сэтгэц, мэдрэл, донтолтын эмнэлэг{% endblock %}
+    </title>
+    <meta
+      name="description"
+      content="AZ TESA эмнэлэг: сэтгэц, мэдрэл, донтолтын үзлэг, оношилгоо, эмчилгээ. Донтолтын шинж тэмдгийг эрт мэдэж, мэргэжлийн тусламж аваарай."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    {% include "partials/navbar.html" %} {% with messages =
+    get_flashed_messages(with_categories=true) %} {% if messages %}
+    <div class="flash-wrap">
+      {% for category, message in messages %}
+      <div class="flash flash-{{ category }}">{{ message }}</div>
+      {% endfor %}
+    </div>
+    {% endif %} {% endwith %} {% block content %}{% endblock %} {% include
+    "partials/footer.html" %}
+
+    <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/accordion.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/tabs.js') }}"></script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

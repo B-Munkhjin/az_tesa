@@ -1,0 +1,41 @@
+<header class="site-header">
+  <div class="container nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-badge">
+        <img
+          src="{{ url_for('static', filename='img/logo.png') }}"
+          alt="AZ TESA logo"
+          class="brand-logo brand-logo--light"
+        />
+        <img
+          src="{{ url_for('static', filename='img/logodark.png') }}"
+          alt="AZ TESA logo"
+          class="brand-logo brand-logo--dark"
+        />
+      </span>
+      <span class="brand-text">
+        <span class="brand-name">{{ clinic.name }}</span>
+        <span class="brand-sub">{{ clinic.tagline }}</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#symptoms">Шинж тэмдэг</a>
+      <a href="#services">Үйлчилгээ</a>
+      <a href="#contact">Холбогдох</a>
+    </nav>
+
+    <div class="nav-actions">
+      {% include "button.html" %}
+
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        aria-label="Цэс нээх"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
